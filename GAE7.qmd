@@ -81,7 +81,7 @@ df1$Block <- factor(df1$Block)
 
 ### Statistical Methods
 
-A linear model was conducted in order to be able to determine the effects of nutrients, fish predators, and combined predators and nutrients on the invertebrate species described previously. A package was used to make a linear mixed-effects model.
+A linear model was conducted in order to be able to determine the effects of nutrients, fish predators, and combined predators and nutrients on the invertebrate species described previously. A package was used for Lmer [@lme4] to make a linear mixed-effects model.
 
 ```         
 ```
