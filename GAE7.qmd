@@ -81,7 +81,7 @@ df1$Block <- factor(df1$Block)
 
 ### Statistical Methods
 
-A linear model was conducted in order to be able to determine the effects of nutrients, fish predators, and combined predators and nutrients on the invertebrate species described previously. A package was used for Lmer [@lme4] to make a linear mixed-effects model.
+A linear model was conducted in order to be able to determine the effects of nutrients, fish predators, and combined predators and nutrients on the invertebrate species described previously. A package was used [@lme4] to make a linear mixed-effects model.
 
 ```         
 ```
@@ -213,10 +213,10 @@ kbl(
 
 There is no significant interaction between fish/predator presence for any Culex, hydrophilid, or dytiscid as shown in @tbl-Culex, @tbl-Hydro, and @tbl-Dytis.
 
-When looking at @tbl-Culex there was a significant difference within the Culex egg rafts whenever there were increasing nutrients (P= 0.0426), and decreasing fish predators being present (P= 0.0016).
+When looking at @tbl-Culex there was a significant difference within the Culex egg rafts whenever there were increasing nutrients (P= 0.0426), and decreasing fish predators being present (P= 0.0016). The block did show a significant difference.
 
-Whenever looking at @tbl-Hydro there appears to be no significant difference on hydrophilid beetles whenever there were less fish present (P= 0.0606) or and there seems to be no significant difference when there were more nutrients (P= 0.1088).
+Whenever looking at @tbl-Hydro there appears to be no significant difference on hydrophilid beetles whenever there were less fish present (P= 0.0606) and there seems to be no significant difference when there were more nutrients present (P= 0.1088). The block, however, did show a significant difference.
 
-Whenever looking at @tbl-Dytis there was a significant difference in dytiscid beetles whenever less fish were present (P= 0), as well as whenever more nutrients were present (P = 0.0256)
+Whenever looking at @tbl-Dytis there was a significant difference in dytiscid beetles whenever less fish were present (P= 0), as well as whenever more nutrients were present (P = 0.0256). The block did show a significant difference.
 
 ## References

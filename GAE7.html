@@ -3298,7 +3298,7 @@ border: 0;
 <p>Please see <span class="citation" data-cites="Pintar.etal2018">Pintar et al. (<a href="#ref-Pintar.etal2018" role="doc-biblioref">2018</a>)</span> for greater detail on experimental design and data collection. In brief, the experiment was set up as a 3 X 3 factorial treatment design (9 treatment combinations). The experiment was replicated in 3 separate locations at 3 different times for a total of 9 replicates. This should have resulted in 81 observations total, however some fish died during the experiment rendering those observations not being included in the data resulting in only 69 observations.</p>
 <section id="statistical-methods" class="level3">
 <h3 class="anchored" data-anchor-id="statistical-methods">Statistical Methods</h3>
-<p>A linear model was conducted in order to be able to determine the effects of nutrients, fish predators, and combined predators and nutrients on the invertebrate species described previously. <span class="citation" data-cites="Lme4">(<a href="#ref-Lme4" role="doc-biblioref"><strong>Lme4?</strong></a>)</span> package was used in the package to make a linear mixed-effects model.</p>
+<p>A linear model was conducted in order to be able to determine the effects of nutrients, fish predators, and combined predators and nutrients on the invertebrate species described previously. A package was used <span class="citation" data-cites="lme4">(<a href="#ref-lme4" role="doc-biblioref">Bates et al. 2015</a>)</span> to make a linear mixed-effects model.</p>
 <pre><code></code></pre>
 <div id="tbl-Culex" class="cell tbl-parent quarto-layout-panel anchored" data-layout-nrows="2">
 <div class="panel-caption table-caption">
@@ -3608,9 +3608,9 @@ border: 0;
 </div>
 <p><strong>Results</strong></p>
 <p>There is no significant interaction between fish/predator presence for any Culex, hydrophilid, or dytiscid as shown in <a href="#tbl-Culex">Table 1</a>, <a href="#tbl-Hydro">Table 2</a>, and <a href="#tbl-Dytis">Table 3</a>.</p>
-<p>When looking at <a href="#tbl-Culex">Table 1</a> there was a significant difference within the Culex egg rafts whenever there were increasing nutrients (P= 0.0426), and decreasing fish predators being present (P= 0.0016).</p>
-<p>Whenever looking at <a href="#tbl-Hydro">Table 2</a> there appears to be no significant difference on hydrophilid beetles whenever there were less fish present (P= 0.0606) or and there seems to be no significant difference when there were more nutrients (P= 0.1088).</p>
-<p>Whenever looking at <a href="#tbl-Dytis">Table 3</a> there was a significant difference in dytiscid beetles whenever less fish were present (P= 0), as well as whenever more nutrients were present (P = 0.0256)</p>
+<p>When looking at <a href="#tbl-Culex">Table 1</a> there was a significant difference within the Culex egg rafts whenever there were increasing nutrients (P= 0.0426), and decreasing fish predators being present (P= 0.0016). The block did show a significant difference.</p>
+<p>Whenever looking at <a href="#tbl-Hydro">Table 2</a> there appears to be no significant difference on hydrophilid beetles whenever there were less fish present (P= 0.0606) and there seems to be no significant difference when there were more nutrients present (P= 0.1088). The block, however, did show a significant difference.</p>
+<p>Whenever looking at <a href="#tbl-Dytis">Table 3</a> there was a significant difference in dytiscid beetles whenever less fish were present (P= 0), as well as whenever more nutrients were present (P = 0.0256). The block did show a significant difference.</p>
 </section>
 </section>
 <section id="references" class="level2">
@@ -3621,6 +3621,9 @@ border: 0;
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="ref-lme4" class="csl-entry" role="listitem">
+Bates, D., M. Mächler, B. Bolker, and S. Walker. 2015. <a href="https://doi.org/10.18637/jss.v067.i01">Fitting linear mixed-effects models using <span class="nocase">lme4</span></a>. Journal of Statistical Software 67:1–48.
+</div>
 <div id="ref-Pintar.etal2018" class="csl-entry" role="listitem">
 Pintar, M. R., J. R. Bohenek, L. L. Eveland, and W. J. Resetarits. 2018. Colonization across gradients of risk and reward: Nutrients and predators generate species-specific responses among aquatic insects. Functional Ecology 32:15891598.
 </div>
@@ -3993,7 +3996,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="fu">### Statistical Methods</span></span>
 <span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>A linear model was conducted in order to be able to determine the effects of nutrients, fish predators, and combined predators and nutrients on the invertebrate species described previously. @Lme4 package was used in the package to make a linear mixed-effects model.</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>A linear model was conducted in order to be able to determine the effects of nutrients, fish predators, and combined predators and nutrients on the invertebrate species described previously. A package was used <span class="co">[</span><span class="ot">@lme4</span><span class="co">]</span> to make a linear mixed-effects model.</span>
 <span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
 <span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -4125,11 +4128,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a>There is no significant interaction between fish/predator presence for any Culex, hydrophilid, or dytiscid as shown in @tbl-Culex, @tbl-Hydro, and @tbl-Dytis.</span>
 <span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a>When looking at @tbl-Culex there was a significant difference within the Culex egg rafts whenever there were increasing nutrients (P= 0.0426), and decreasing fish predators being present (P= 0.0016).</span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a>When looking at @tbl-Culex there was a significant difference within the Culex egg rafts whenever there were increasing nutrients (P= 0.0426), and decreasing fish predators being present (P= 0.0016). The block did show a significant difference.</span>
 <span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a>Whenever looking at @tbl-Hydro there appears to be no significant difference on hydrophilid beetles whenever there were less fish present (P= 0.0606) or and there seems to be no significant difference when there were more nutrients (P= 0.1088).</span>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a>Whenever looking at @tbl-Hydro there appears to be no significant difference on hydrophilid beetles whenever there were less fish present (P= 0.0606) and there seems to be no significant difference when there were more nutrients present (P= 0.1088). The block, however, did show a significant difference.</span>
 <span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a>Whenever looking at @tbl-Dytis there was a significant difference in dytiscid beetles whenever less fish were present (P= 0), as well as whenever more nutrients were present (P = 0.0256)</span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a>Whenever looking at @tbl-Dytis there was a significant difference in dytiscid beetles whenever less fish were present (P= 0), as well as whenever more nutrients were present (P = 0.0256). The block did show a significant difference.</span>
 <span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
