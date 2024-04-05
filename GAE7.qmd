@@ -1,6 +1,6 @@
 ---
 title: "GAE7"
-author: "Your Name Here"
+author: "Jaslyn Stamey"
 format: 
   html:
     theme: custom.scss
@@ -26,6 +26,7 @@ knitr::opts_chunk$set(
 
 library(emmeans)
 library(lmerTest)
+library(lattice)
 library(effectsize)
 library(car)
 library(ggfortify)
@@ -80,6 +81,142 @@ df1$Block <- factor(df1$Block)
 
 ### Statistical Methods
 
-## Results
+A linear model was conducted in order to be able to determine the effects of nutrients, fish predators, and combined predators and nutrients on the invertebrate species described previously. A package was used to make a linear mixed-effects model.
+
+```         
+```
+
+```{r}
+#| label: tbl-Culex
+#| tbl-cap: "Linear mixed-effects model of nutrients and predation on Culex egg rafts using data provided by @Pintar.etal2018 "
+#| tbl-subcap:
+#|     - "Fixed effect."
+#|     - "Random effect."
+#| layout-nrows: 2
+
+culexmod <- lmer(Culex_Egg_Rafts ~ Fish*Nutrient + (1|Block), data = df1)
+
+CulexAnova <- anova(culexmod)
+
+
+kbl(
+  CulexAnova,
+  col.names = c(
+    "SS",
+    "MS",
+    "df1",
+    "df2",
+    "F",
+    "P"
+    ),
+  digits = c(3,3,0,0,3,4)
+  ) |>
+  kable_classic()
+
+kbl(
+  rand(culexmod),
+  col.names = c(
+    "Parameters",
+    "log-likelihood",
+    "AIC",
+    "LRT",
+    "df",
+    "P"
+    ),
+  digits = c(0,3,3,3,0,4)
+  )
+```
+
+```{r}
+#| label: tbl-Hydro
+#| tbl-cap: "Linears mixed-effect models of nutrients and predation on hydrophilid beetles using data provided by @Pintar.etal2018"
+#| tbl-subcap:
+#|     - "Fixed effect."
+#|     - "Random effect."
+#| layout-nrows: 2
+
+hydromod <- lmer(Hydrophilidae ~ Fish*Nutrient + (1|Block), data = df1)
+
+HydroAnova <- anova(hydromod)
+
+
+kbl(
+  HydroAnova,
+  col.names = c(
+    "SS",
+    "MS",
+    "df1",
+    "df2",
+    "F",
+    "P"
+    ),
+  digits = c(3,3,0,0,3,4)
+  ) |>
+  kable_classic()
+
+kbl(
+  rand(hydromod),
+  col.names = c(
+    "Parameters",
+    "log-likelihood",
+    "AIC",
+    "LRT",
+    "df",
+    "P"
+    ),
+  digits = c(0,3,3,3,0,4)
+  )
+```
+
+```{r}
+#| label: tbl-Dytis
+#| tbl-cap: "Linear mixed-effects models of nutrients and predation on dytiscid beetles using data provided by @Pintar.etal2018"
+#| tbl-subcap:
+#|     - "Fixed effect."
+#|     - "Random effect."
+#| layout-nrows: 2
+
+dytismod <- lmer(Dytiscidae ~ Fish*Nutrient + (1|Block), df1)
+
+DytisAnova <- anova(dytismod)
+
+
+kbl(
+  DytisAnova,
+  col.names = c(
+    "SS",
+    "MS",
+    "df1",
+    "df2",
+    "F",
+    "P"
+    ),
+  digits = c(3,3,0,0,3,4)
+  ) |>
+  kable_classic()
+
+kbl(
+  rand(dytismod),
+  col.names = c(
+    "Parameters",
+    "log-likelihood",
+    "AIC",
+    "LRT",
+    "df",
+    "P"
+    ),
+  digits = c(0,3,3,3,0,4)
+  )
+```
+
+**Results**
+
+There is no significant interaction between fish/predator presence for any Culex, hydrophilid, or dytiscid as shown in @tbl-Culex, @tbl-Hydro, and @tbl-Dytis.
+
+When looking at @tbl-Culex there was a significant difference within the Culex egg rafts whenever there were increasing nutrients (P= 0.0426), and decreasing fish predators being present (P= 0.0016).
+
+Whenever looking at @tbl-Hydro there appears to be no significant difference on hydrophilid beetles whenever there were less fish present (P= 0.0606) or and there seems to be no significant difference when there were more nutrients (P= 0.1088).
+
+Whenever looking at @tbl-Dytis there was a significant difference in dytiscid beetles whenever less fish were present (P= 0), as well as whenever more nutrients were present (P = 0.0256)
 
 ## References
